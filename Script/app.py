@@ -8,20 +8,8 @@ serialInst =  serial.Serial()
 
 portList = []
 
-for port in ports:
-    portList.append(str(port))
-    print(str(port))
-
-
-val = int(input("Select Port: COM"))
-
-for x in range(0, len(portList)):
-    if portList[x].startswith("COM" + str(val)):
-        portVar = "COM" + str(val)
-        print(portList[x])
-
 serialInst.baudrate = 9600
-serialInst.port = portVar
+serialInst.port = 'COM4'
 serialInst.open()
 pTime = time.time()
 
